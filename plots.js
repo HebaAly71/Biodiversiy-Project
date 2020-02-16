@@ -51,13 +51,13 @@ function buildCharts(sample) {
     console.log(toptenSample);
     otuid = toptenSample.map(otu => otu.otu_ids.slice(0, 10));
     otulabel = toptenSample.map(otulabels => otulabels.otu_labels.slice(0, 10));
-    //otuid1 = otuid[0].map(String);
+    var otuid1 = otuid[0].map(otuid2 => "OTU" + otuid2.toString());
     samp_val_final = toptenSample.map(sv => sv.sample_values.slice(0, 10));
     console.log(otuid);
     console.log(samp_val_final);
     var trace = {
       x: samp_val_final[0],
-      y: otuid[0].map(String),
+      y: otuid1,
       text: otulabel[0],
       type: 'bar',
       orientation: "h"
