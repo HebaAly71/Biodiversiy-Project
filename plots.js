@@ -69,7 +69,7 @@ function buildCharts(sample) {
     console.log(dataplot);
     
     var trace2 = {
-      x: otuid[0].map(String),
+      x: otuid[0],
       y: samp_val_final[0],
       text: otulabel[0],
       mode: 'markers',
