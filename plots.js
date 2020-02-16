@@ -60,7 +60,12 @@ function buildCharts(sample) {
       y: otuid1,
       text: otulabel[0],
       type: 'bar',
-      orientation: "h"
+      orientation: "h",
+      transforms: [{
+        type: 'sort',
+        target: 'y',
+        order: 'descending'
+      }]
     };
     console.log("trace:\n");
     console.log(trace);
@@ -81,6 +86,7 @@ function buildCharts(sample) {
     };
     var dataplot2 = [trace2]
     //var layout = {
+     // yaxis: dict(autorange="reversed")
     //title: "Top 10 Bacterial Species",
     //xaxis: { title: "City" },
     //yaxis: { title: "Population Growth, 2016-2017"}
